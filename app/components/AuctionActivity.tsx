@@ -3,6 +3,7 @@
 import { nounsAuctionHouseABI } from "@/web3/wagmi";
 import React, { useState } from "react";
 import { useAccount, useContractWrite, useConnect } from "wagmi";
+import { InjectedConnector } from "wagmi/connectors/injected";
 
 export const AuctionActivity = () => {
   const [auctionEnded, setAuctionEnded] = useState(false);
@@ -13,7 +14,7 @@ export const AuctionActivity = () => {
     args: [BigInt(877)],
   });
 
-  const { connect } = useConnect();
+  const { connect } = useConnect({ connector: new InjectedConnector() });
 
   const { address } = useAccount();
 
@@ -50,6 +51,7 @@ export const AuctionActivity = () => {
         ) : (
           <button
             onClick={() => {
+              console.log({ address });
               if (!address) {
                 connect();
               }
