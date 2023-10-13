@@ -1,27 +1,31 @@
 {
   "name": "nounish-auction-house",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "wagmi:generate": "pnpm wagmi generate"
   },
   "dependencies": {
+    "@wagmi/cli": "^1.5.2",
+    "@wagmi/core": "^1.4.3",
+    "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "viem": "^1.16.5",
+    "wagmi": "^1.4.3"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
     "postcss": "^8",
     "tailwindcss": "^3",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "typescript": "^5"
   }
 }
