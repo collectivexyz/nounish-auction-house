@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@momentranks/database':
-    specifier: ^0.0.10
-    version: 0.0.10(react@18.2.0)
+    specifier: ^0.0.12
+    version: 0.0.12(react@18.2.0)
   '@momentranks/libs':
     specifier: ^0.0.14
     version: 0.0.14(react@18.2.0)
@@ -754,8 +754,8 @@ packages:
       - supports-color
     dev: false
 
-  /@momentranks/database@0.0.10(react@18.2.0):
-    resolution: {integrity: sha512-gLHKd/R6EjbSsiwTmSSR5eq1GYn1qcrbwk2DsKYjwTebfaOdKD+RZu1vaUpDg0Z253i9QiNH9dFiDHzuMVmLBQ==}
+  /@momentranks/database@0.0.12(react@18.2.0):
+    resolution: {integrity: sha512-hSi5VDi8XANQM9fdFpsPG+Ci3gsWFyaGE7ODaragJEncBerLZFX7Dp1GarZQ/JD0abs+YkN1Uqab1OkNuBTzVA==}
     dependencies:
       '@momentranks/libs': 0.0.14(react@18.2.0)
       '@momentranks/types': 0.0.3

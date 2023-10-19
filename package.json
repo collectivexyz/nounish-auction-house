@@ -10,7 +10,7 @@
     "wagmi:generate": "pnpm wagmi generate"
   },
   "dependencies": {
-    "@momentranks/database": "^0.0.10",
+    "@momentranks/database": "^0.0.12",
     "@momentranks/libs": "^0.0.14",
     "@momentranks/types": "^0.0.3",
     "@wagmi/cli": "^1.5.2",
