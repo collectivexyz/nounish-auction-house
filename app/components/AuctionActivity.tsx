@@ -4,6 +4,7 @@ import { nounsAuctionHouseABI } from "@/web3/wagmi";
 import React, { useState } from "react";
 import { useAccount, useContractWrite, useConnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
+import { DynamicProvider } from "@momentranks/libs/user/DynamicProvider";
 
 export const AuctionActivity = () => {
   const [auctionEnded, setAuctionEnded] = useState(false);
@@ -12,6 +13,9 @@ export const AuctionActivity = () => {
     abi: nounsAuctionHouseABI,
     functionName: "createBid",
     args: [BigInt(877)],
+    address: "0x830BD73E4184ceF73443C15111a1DF14e495C706",
+    //1 eth
+    value: BigInt(1000000000000000000),
   });
 
   const { connect } = useConnect({ connector: new InjectedConnector() });
@@ -55,6 +59,7 @@ export const AuctionActivity = () => {
               if (!address) {
                 connect();
               }
+              write();
             }}
             className="w-full rounded bg-blue-600 py-4 text-white"
           >

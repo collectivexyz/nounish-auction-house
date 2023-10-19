@@ -2,13 +2,17 @@
   "name": "nounish-auction-house",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "dev": "FORCE_COLOR=1 pnpm env:config next dev",
+    "env:config": "doppler setup --no-interactive && doppler run --preserve-env",
     "wagmi:generate": "pnpm wagmi generate"
   },
   "dependencies": {
+    "@momentranks/database": "^0.0.10",
+    "@momentranks/libs": "^0.0.14",
+    "@momentranks/types": "^0.0.3",
     "@wagmi/cli": "^1.5.2",
     "@wagmi/core": "^1.4.3",
     "next": "13.5.4",
