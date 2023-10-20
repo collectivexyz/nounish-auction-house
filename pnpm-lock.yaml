@@ -6,14 +6,17 @@ settings:
 
 dependencies:
   '@momentranks/database':
-    specifier: ^0.0.12
-    version: 0.0.12(react@18.2.0)
+    specifier: ^0.0.17
+    version: 0.0.17(prisma@5.4.2)(react@18.2.0)
   '@momentranks/libs':
-    specifier: ^0.0.14
-    version: 0.0.14(react@18.2.0)
+    specifier: ^0.0.17
+    version: 0.0.17(react@18.2.0)
   '@momentranks/types':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.5
+    version: 0.0.5
+  '@prisma/client':
+    specifier: 5.4.2
+    version: 5.4.2(prisma@5.4.2)
   '@wagmi/cli':
     specifier: ^1.5.2
     version: 1.5.2(@wagmi/core@1.4.3)(typescript@5.2.2)(wagmi@1.4.3)
@@ -58,6 +61,9 @@ devDependencies:
   postcss:
     specifier: ^8
     version: 8.4.31
+  prisma:
+    specifier: ^5.4.2
+    version: 5.4.2
   tailwindcss:
     specifier: ^3
     version: 3.3.3
@@ -754,12 +760,12 @@ packages:
       - supports-color
     dev: false
 
-  /@momentranks/database@0.0.12(react@18.2.0):
-    resolution: {integrity: sha512-hSi5VDi8XANQM9fdFpsPG+Ci3gsWFyaGE7ODaragJEncBerLZFX7Dp1GarZQ/JD0abs+YkN1Uqab1OkNuBTzVA==}
+  /@momentranks/database@0.0.17(prisma@5.4.2)(react@18.2.0):
+    resolution: {integrity: sha512-domFwArHUQtdfUf3fYmht47X2xvS/AmkeSC+CravY3pXsEPGb8QGj+2TWj1lZOIjN14FpKw+rzP7dV8YtZgW0w==}
     dependencies:
-      '@momentranks/libs': 0.0.14(react@18.2.0)
-      '@momentranks/types': 0.0.3
-      '@prisma/client': 5.4.2
+      '@momentranks/libs': 0.0.17(react@18.2.0)
+      '@momentranks/types': 0.0.5
+      '@prisma/client': 5.4.2(prisma@5.4.2)
       '@prisma/extension-accelerate': 0.6.2(@prisma/client@5.4.2)
       '@prisma/generator-helper': 5.4.2
       '@types/crypto-js': 4.1.2
@@ -777,10 +783,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@momentranks/libs@0.0.14(react@18.2.0):
-    resolution: {integrity: sha512-vqH6S7NTQeCs6Mr+uWQj/Vxri+FI3Oka0ZVqmWX8ucur8dQAnPfDq86SX6wAXSHA/CIMu2o1FTSOsCw/WVuv2w==}
+  /@momentranks/libs@0.0.17(react@18.2.0):
+    resolution: {integrity: sha512-eP6gSDl7mzU+r8t4sfUjlampOxci2RR+NdYQM9X2hIurXsXEXdbT/LWp3gJ4m/Dq5f4O2XjtMIaIbEJ24BgxFg==}
     dependencies:
-      '@momentranks/types': 0.0.2
+      '@momentranks/types': 0.0.3
       '@snapshot-labs/snapshot.js': 0.7.3
       country-emoji: 1.5.6
       ethers: 5.7.2
@@ -795,12 +801,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@momentranks/types@0.0.2:
-    resolution: {integrity: sha512-mwYJx9I8enHogNadZAhOBuMGVyH2Khkd4qirXWiqt79krWi3HGyYLNumtawM/qKAbWNQpuF5PE5yZofgPHevHQ==}
-    dev: false
-
   /@momentranks/types@0.0.3:
     resolution: {integrity: sha512-v2ZC27EruTaPOeiMl2OFQzS65w+pgJyUooqq/kjWFti+42xi94FCr/hXeUwxIudInP9TOj2JXlY6BHSM9OI6lg==}
+    dev: false
+
+  /@momentranks/types@0.0.5:
+    resolution: {integrity: sha512-0pj9Z3n2TalXFwq7oRYazWA2JjlZBy99jvNuC10A3NOeZ9Hox6yH0yN3ZmKtb3qqFUrY7XJuxzxoqCKDwIxiiQ==}
     dev: false
 
   /@motionone/animation@10.16.3:
@@ -984,7 +990,7 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@prisma/client@5.4.2:
+  /@prisma/client@5.4.2(prisma@5.4.2):
     resolution: {integrity: sha512-2xsPaz4EaMKj1WS9iW6MlPhmbqtBsXAOeVttSePp8vTFTtvzh2hZbDgswwBdSCgPzmmwF+tLB259QzggvCmJqA==}
     engines: {node: '>=16.13'}
     requiresBuild: true
@@ -995,6 +1001,7 @@ packages:
         optional: true
     dependencies:
       '@prisma/engines-version': 5.4.1-2.ac9d7041ed77bcc8a8dbd2ab6616b39013829574
+      prisma: 5.4.2
     dev: false
 
   /@prisma/debug@5.4.2:
@@ -1011,13 +1018,17 @@ packages:
     resolution: {integrity: sha512-wvupDL4AA1vf4TQNANg7kR7y98ITqPsk6aacfBxZKtrJKRIsWjURHkZCGcQliHdqCiW/hGreO6d6ZuSv9MhdAA==}
     dev: false
 
+  /@prisma/engines@5.4.2:
+    resolution: {integrity: sha512-fqeucJ3LH0e1eyFdT0zRx+oETLancu5+n4lhiYECyEz6H2RDskPJHJYHkVc0LhkU4Uv7fuEnppKU3nVKNzMh8g==}
+    requiresBuild: true
+
   /@prisma/extension-accelerate@0.6.2(@prisma/client@5.4.2):
     resolution: {integrity: sha512-KIBVPeWt8qaSg7wQ+TXmCVeUDoW75whtXcdS9dbHxRoO2OWFH5I9+qbkHBhx5Wj/h1wQpS8usuxGnsZqiBjUpQ==}
     engines: {node: '>=16'}
     peerDependencies:
       '@prisma/client': '>=4.16.1'
     dependencies:
-      '@prisma/client': 5.4.2
+      '@prisma/client': 5.4.2(prisma@5.4.2)
     dev: false
 
   /@prisma/generator-helper@5.4.2:
@@ -4817,6 +4828,14 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: false
+
+  /prisma@5.4.2:
+    resolution: {integrity: sha512-GDMZwZy7mysB2oXU+angQqJ90iaPFdD0rHaZNkn+dio5NRkGLmMqmXs31//tg/qXT3iB0cTQwnGGQNuirhSTZg==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.4.2
 
   /process-warning@1.0.0:
     resolution: {integrity: sha512-du4wfLyj4yCZq1VupnVSZmRsPJsNuxoDQFdCFHLaYiEbFBD7QE0a+I4D7hOxrVnh78QE/YipFAj9lXHiXocV+Q==}

@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Blocks } from "@momentranks/database/dist/exports";
-// import { Stories } from "@momentranks/database/models/revolution/stories/Stories";
+import { Blocks } from "@momentranks/database/models/eth/Blocks";
+import { Currency } from "@momentranks/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log({ Currency: Currency.ETH });
   const test = await Blocks().getLatestIngestedBlockNumber();
   console.log({ test });
   return (
