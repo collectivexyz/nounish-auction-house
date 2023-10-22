@@ -12,9 +12,9 @@
     "db:generate": "pnpm db:generate:client"
   },
   "dependencies": {
-    "@momentranks/database": "^0.0.17",
-    "@momentranks/libs": "^0.0.17",
-    "@momentranks/types": "^0.0.5",
+    "@momentranks/database": "workspace:*",
+    "@momentranks/libs": "workspace:*",
+    "@momentranks/types": "workspace:*",
     "@prisma/client": "5.4.2",
     "@wagmi/cli": "^1.5.2",
     "@wagmi/core": "^1.4.3",

@@ -1,23 +1,23 @@
-"use client";
-
 import AuctionActivity from "./components/AuctionActivity";
-import { WagmiConfig, createConfig, mainnet } from "wagmi";
-import { createPublicClient, http } from "viem";
+import { NounishAuctions } from "@momentranks/database/models/revolution/auctions/nouns/NounsAuctions";
+import { serializeSync } from "@momentranks/database";
+import { notFound } from "next/navigation";
 
-const config = createConfig({
-  autoConnect: true,
-  publicClient: createPublicClient({
-    chain: mainnet,
-    transport: http(),
-  }),
-});
+export default async function Home() {
+  const revolutionId = "nouns";
+  const auction = await NounishAuctions().getLatestAuction(revolutionId);
 
-export default function Home() {
+  const nft = await auction.nft();
+
+  if (!nft) {
+    notFound();
+  }
+
+  console.log({ auction, nft });
+
   return (
-    <WagmiConfig config={config}>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <AuctionActivity />
-      </main>
-    </WagmiConfig>
+    <main className="flex min-h-screen w-full h-full flex-col items-center justify-between">
+      <AuctionActivity nft={nft} auction={serializeSync(auction)} />
+    </main>
   );
 }
