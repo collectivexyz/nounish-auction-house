@@ -12,12 +12,14 @@
     "db:generate": "pnpm db:generate:client"
   },
   "dependencies": {
-    "@momentranks/database": "workspace:*",
-    "@momentranks/libs": "workspace:*",
-    "@momentranks/types": "workspace:*",
+    "@collectivexyz/ui": "^0.0.0",
+    "@momentranks/database": "^0.0.29",
+    "@momentranks/libs": "^0.0.33",
+    "@momentranks/types": "^0.0.5",
     "@prisma/client": "5.4.2",
     "@wagmi/cli": "^1.5.2",
     "@wagmi/core": "^1.4.3",
+    "classnames": "^2.3.2",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",

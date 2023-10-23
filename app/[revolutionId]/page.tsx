@@ -1,10 +1,17 @@
-import AuctionActivity from "./components/AuctionActivity";
+import AuctionActivity from "../components/AuctionActivity";
 import { NounishAuctions } from "@momentranks/database/models/revolution/auctions/nouns/NounsAuctions";
 import { serializeSync } from "@momentranks/database";
 import { notFound } from "next/navigation";
 
-export default async function Home() {
-  const revolutionId = "nouns";
+interface PageProps {
+  params: {
+    revolutionId: string;
+  };
+}
+
+export default async function AuctionPage(props: PageProps) {
+  const { params } = props;
+  const { revolutionId } = params;
   const auction = await NounishAuctions().getLatestAuction(revolutionId);
 
   const nft = await auction.nft();
