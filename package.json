@@ -12,7 +12,7 @@
     "db:generate": "pnpm db:generate:client"
   },
   "dependencies": {
-    "@momentranks/database": "^0.0.29",
+    "@momentranks/database": "^0.0.30",
     "@momentranks/libs": "^0.0.33",
     "@momentranks/types": "^0.0.5",
     "@prisma/client": "5.4.2",

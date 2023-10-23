@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@momentranks/database':
-    specifier: ^0.0.29
-    version: 0.0.29(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(prisma@5.4.2)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5)
+    specifier: ^0.0.30
+    version: 0.0.30(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(prisma@5.4.2)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5)
   '@momentranks/libs':
     specifier: ^0.0.33
     version: 0.0.33(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5)
@@ -1340,8 +1340,8 @@ packages:
       - supports-color
     dev: false
 
-  /@momentranks/database@0.0.29(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(prisma@5.4.2)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5):
-    resolution: {integrity: sha512-cr3DFScSo4YTYDKcVDFzx39+YHCFW/MAfx5CShnJ9uGFmSurI6O/iIXa/WrMzYrsZ9+qiQFUcod79MylyXXu2g==}
+  /@momentranks/database@0.0.30(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(prisma@5.4.2)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5):
+    resolution: {integrity: sha512-R+tQZlz//xdIyz99kt3jPZKtccWJknS3Gb9qGh4lyGRMCHOseVNCY/9L3nfN1xMe9XkZV61WiEaET9vcKjp78Q==}
     dependencies:
       '@momentranks/libs': 0.0.33(@babel/core@7.23.2)(@dynamic-labs/logger@0.18.100-viem.27)(@dynamic-labs/types@0.18.100-viem.27)(@dynamic-labs/wallet-book@0.18.100-viem.27)(@types/react@18.2.31)(@wagmi/core@1.4.5)(eventemitter3@5.0.1)(react-dom@18.2.0)(react@18.2.0)(viem@1.16.6)(wagmi@1.4.5)
       '@momentranks/types': 0.0.5
