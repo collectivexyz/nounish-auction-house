@@ -12,7 +12,6 @@
     "db:generate": "pnpm db:generate:client"
   },
   "dependencies": {
-    "@collectivexyz/ui": "^0.0.0",
     "@momentranks/database": "^0.0.29",
     "@momentranks/libs": "^0.0.33",
     "@momentranks/types": "^0.0.5",
